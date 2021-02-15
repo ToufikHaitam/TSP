@@ -333,7 +333,13 @@ void  Genetique::solution(){
 
 
         }
+        for(int t=0;t<nbindividu;t++){
+            float rand1=((double)rand() / (double)RAND_MAX ;
+            if(rand1<mutationRatio){
 
+                mutation(local[t]);
+            }
+        }
 
         //copier le local dans globale
                 for(int k=0;k<nbindividu;k++){
@@ -343,7 +349,7 @@ void  Genetique::solution(){
                     }
         //fin copier le globale dans local
 
-trier_population(local);
+t    rier_population(local);
 
   cout<<fonctionobjective(local[0]);
 
